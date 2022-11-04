@@ -1,0 +1,359 @@
+{
+	"info": {
+		"_postman_id": "f5aa9b33-67c6-414f-92f8-e1dc7f6e0dc1",
+		"name": "To Do List",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14244155"
+	},
+	"item": [
+		{
+			"name": "Task related APIs",
+			"item": [
+				{
+					"name": "Create a Task",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Test the To Do list API\",\r\n    \"dueDate\": \"22/11/5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}createTask.php",
+							"host": [
+								"{{url}}createTask",
+								"php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Task",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"taskId\": \"Tsk1667491\",\r\n    \"title\": \"Task 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}deleteTask.php",
+							"host": [
+								"{{url}}deleteTask",
+								"php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mark a Task as Completed",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"taskId\": \"Tsk1667491\",\r\n    \"title\": \"Task 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}markTaskComplete.php",
+							"host": [
+								"{{url}}markTaskComplete",
+								"php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View all Tasks",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}displayAllTasks.php",
+							"host": [
+								"{{url}}displayAllTasks",
+								"php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Tasks",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"search_keyword\": \"the\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}searchTasks.php",
+							"host": [
+								"{{url}}searchTasks",
+								"php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filter Tasks",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"filter\": \"Overdue\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}filterTasks.php",
+							"host": [
+								"{{url}}filterTasks",
+								"php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Task permanently",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}deleteTaskPermanently.php",
+							"host": [
+								"{{url}}deleteTaskPermanently",
+								"php"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sub task related APIs",
+			"item": [
+				{
+					"name": "Create a Sub task",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Test the Delete API\",\r\n    \"dueDate\": \"22/11/5\",\r\n    \"taskId\": \"Tsk1667514786168\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}createSubTask.php",
+							"host": [
+								"{{url}}createSubTask",
+								"php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Sub task",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subTaskId\": \"STsk1667514865228\",\r\n    \"title\": \"Test the Create API\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}deleteSubTask.php",
+							"host": [
+								"{{url}}deleteSubTask",
+								"php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mark a Sub task as Completed",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subTaskId\": \"STsk1667514913471\",\r\n    \"title\": \"Test the Update API\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}markSubTaskComplete.php",
+							"host": [
+								"{{url}}markSubTaskComplete",
+								"php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View all Sub tasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}displayAllSubTasks.php",
+							"host": [
+								"{{url}}displayAllSubTasks",
+								"php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Sub tasks",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"search_keyword\": \"the\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}searchSubTasks.php",
+							"host": [
+								"{{url}}searchSubTasks",
+								"php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filter Sub tasks",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"filter\": \"Overdue\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}filterSubTasks.php",
+							"host": [
+								"{{url}}filterSubTasks",
+								"php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Sub task permanently",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}deleteSubTaskPermanently.php",
+							"host": [
+								"{{url}}deleteSubTaskPermanently",
+								"php"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8080/api/",
+			"type": "string"
+		}
+	]
+}
